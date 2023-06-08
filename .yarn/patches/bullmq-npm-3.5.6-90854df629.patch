@@ -1,0 +1,26 @@
+diff --git a/dist/cjs/classes/worker.js b/dist/cjs/classes/worker.js
+index 9a5001c19cb1bc4bf2faf823f938bbae308f5ad8..2c708718381347c699b5bf96e5b5edd3e0a4af30 100644
+--- a/dist/cjs/classes/worker.js
++++ b/dist/cjs/classes/worker.js
+@@ -29,7 +29,7 @@ class Worker extends queue_base_1.QueueBase {
+         this.drained = false;
+         this.waiting = false;
+         this.running = false;
+-        this.blockTimeout = 0;
++        this.blockTimeout = 600000;
+         this.limitUntil = 0;
+         if (this.opts.stalledInterval <= 0) {
+             throw new Error('stalledInterval must be greater than 0');
+diff --git a/dist/esm/classes/worker.js b/dist/esm/classes/worker.js
+index 7b90809999009e3c1b9d79ddb6ad4fe0ef00e71c..bf4f3c5de730ba65ab272742ac46583e4c118aef 100644
+--- a/dist/esm/classes/worker.js
++++ b/dist/esm/classes/worker.js
+@@ -26,7 +26,7 @@ export class Worker extends QueueBase {
+         this.drained = false;
+         this.waiting = false;
+         this.running = false;
+-        this.blockTimeout = 0;
++        this.blockTimeout = 600000;
+         this.limitUntil = 0;
+         if (this.opts.stalledInterval <= 0) {
+             throw new Error('stalledInterval must be greater than 0');
